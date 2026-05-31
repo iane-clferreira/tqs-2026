@@ -8,8 +8,7 @@ Os capítulos 5 (TDD) e 10 (atividade prática) sugerem novos testes
 para cobrir casos de borda — adicione-os à medida que evoluir o projeto.
 """
 
-
-from src.validators import validar_cpf, validar_email, validar_cnpj, validar_telefone
+from src.validators import validar_cnpj, validar_cpf, validar_email, validar_telefone
 
 
 def test_aceita_cpf_valido():
@@ -28,7 +27,8 @@ def test_rejeita_email_sem_arroba():
     assert validar_email("semarroba.com") is False
 
 
-#Novos testes adicionados
+# Novos testes adicionados
+
 
 def test_aceita_cnpj_valido_com_mascara():
     assert validar_cnpj("11.222.333/0001-81") is True
@@ -68,4 +68,3 @@ def test_rejeita_telefone_com_ddd_invalido():
 
 def test_rejeita_telefone_com_tamanho_errado():
     assert validar_telefone("1191234567") is False
-

@@ -36,4 +36,3 @@ def test_validar_retorna_resultados_corretos(client):
         "email_valido": True,
         "telefone_valido": True,
     }
-
